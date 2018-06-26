@@ -121,6 +121,4 @@ public class Jsd {
 				+ ", itemBrand=" + itemBrand + ", description=" + description + ", msrp=" + msrp + ", model="
 				+ model + ", loadNumber=" + loadNumber + "]"; 
 	}
-	
-
 }

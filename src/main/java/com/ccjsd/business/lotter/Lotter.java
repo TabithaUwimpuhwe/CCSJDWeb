@@ -24,10 +24,6 @@ public Lotter() {
 		super();
 	}
 
-//	public Lotter() {
-//		userName = "";
-//		
-//	}
 	
 	public Lotter(int id, String userName) {
 		super();
@@ -54,7 +50,6 @@ public Lotter() {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	
 	
 
 	@Override

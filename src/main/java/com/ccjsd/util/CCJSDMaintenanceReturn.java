@@ -40,7 +40,6 @@ public class CCJSDMaintenanceReturn {
 		}
 		else {
 			r.setResult(FAILURE);
-			// Can't use obj.getClass() because obj is null
 			r.setMessage("Not found");
 		}
 		return r;
