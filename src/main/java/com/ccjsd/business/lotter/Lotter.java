@@ -17,7 +17,7 @@ public class Lotter {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String userName;
+	private String name;
 
 	
 public Lotter() {
@@ -25,15 +25,15 @@ public Lotter() {
 	}
 
 	
-	public Lotter(int id, String userName) {
+	public Lotter(int id, String name) {
 		super();
 		this.id = id;
-		this.userName = userName;
+		this.name = name;
 		
 	}
 
 	public Lotter(String un) {
-		setUserName(un);
+		setName(un);
 		
 	}
 	
@@ -44,16 +44,16 @@ public Lotter() {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + "]"; 
+		return "User [id=" + id + ", name=" + name + "]"; 
 	}
 }

@@ -1,5 +1,6 @@
 package com.ccjsd.web;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,7 +45,15 @@ public class AuctionController extends BaseController {
 		return getReturnArray(p.get());
 
 	}
-
+	
+	@GetMapping(path="/Authenticate")
+	public @ResponseBody List<Auction> getAuthenticate (@RequestParam Timestamp endDateTime) {
+	
+		Auction auction= auctionRepository.findByEndDateTime(endDateTime);
+		return getReturnArray(auction);
+	
+	}
+	
 	@PostMapping(path="/Add") // Map ONLY GET Requests
 	public @ResponseBody CCJSDMaintenanceReturn addNewAuction (@RequestBody Auction auction) {
 		try {

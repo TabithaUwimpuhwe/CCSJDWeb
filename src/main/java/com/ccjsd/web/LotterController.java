@@ -31,10 +31,10 @@ public class LotterController extends BaseController {
 	}
 	
 	@GetMapping(path="/Get")
-	public @ResponseBody List<Lotter> getUSer (@RequestParam int id) {
+	public @ResponseBody List<Lotter> getLotter (@RequestParam int id) {
 		
-		Optional<Lotter> u =lotterRepository.findById(id);
-		return getReturnArray(u.get());
+		Optional<Lotter> l =lotterRepository.findById(id);
+		return getReturnArray(l.get());
 
 	}
 	
@@ -68,6 +68,7 @@ return CCJSDMaintenanceReturn.getMaintReturn(lotter);
 	public @ResponseBody CCJSDMaintenanceReturn updateLotter (@RequestBody Lotter lotter) {
 		try {
 			lotterRepository.save(lotter);
+			System.out.println("Lotter updated:  "+lotter);
 		}
 		catch (Exception e) {
 			lotter = null;

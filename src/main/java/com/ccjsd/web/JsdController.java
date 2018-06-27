@@ -31,7 +31,7 @@ public class JsdController extends BaseController {
 	}
 	
 	@GetMapping(path="/Get")
-	public @ResponseBody List<Jsd> getUSer (@RequestParam int id) {
+	public @ResponseBody List<Jsd> getJsd (@RequestParam int id) {
 		
 		Optional<Jsd> u =jsdRepository.findById(id);
 		return getReturnArray(u.get());

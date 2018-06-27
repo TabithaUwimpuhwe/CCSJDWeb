@@ -32,8 +32,8 @@ public class ImageController extends BaseController {
 	@GetMapping(path="/Get")
 	public @ResponseBody List<Image> getImage (@RequestParam int id) {
 		
-		Optional<Image> v =imageRepository.findById(id);
-		return getReturnArray(v.get());
+		Optional<Image> i=imageRepository.findById(id);
+		return getReturnArray(i.get());
 	}
 	
 	@PostMapping(path="/Add") 
@@ -51,9 +51,9 @@ return CCJSDMaintenanceReturn.getMaintReturn(image);
 	public @ResponseBody CCJSDMaintenanceReturn deleteImage (@RequestParam int id) {
 		Optional<Image> image = imageRepository.findById(id);
 		try {
-			Image v = image.get();
-			imageRepository.delete(v);
-			System.out.println("Image deleted:  "+v);
+			Image i = image.get();
+			imageRepository.delete(i);
+			System.out.println("Image deleted:  "+i);
 		}
 		catch (Exception e) {
 			image = null;

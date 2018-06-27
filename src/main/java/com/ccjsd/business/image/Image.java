@@ -17,13 +17,17 @@ public class Image {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	private int pictureId;
+	private int id;
 	private String pictureUrl;
 	private String item;
 	
-	public Image(int pictureId, String pictureUrl, String item) {
+	public Image() {
 		super();
-		this.pictureId = pictureId;
+	}
+
+	public Image(int id, String pictureUrl, String item) {
+		super();
+		this.id = id;
 		this.pictureUrl = pictureUrl;
 		this.item = item;
 	}
@@ -34,12 +38,12 @@ public class Image {
 		setItem (item);
 	}
 
-	public int getPictureId() {
-		return pictureId;
+	public int getId() {
+		return id;
 	}
 
-	public void setPictureId(int pictureId) {
-		this.pictureId = pictureId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getPictureURL() {
@@ -61,7 +65,7 @@ public class Image {
 		
 	@Override
 	public String toString() {
-		return "Image [pictureId=" + pictureId + ", pictureUrl=" + pictureUrl + ", item=" + item + "]";
+		return "Image [id=" + id + ", pictureUrl=" + pictureUrl + ", item=" + item + "]";
 	}
 	
 }
